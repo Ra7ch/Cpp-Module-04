@@ -1,5 +1,17 @@
- #ifndef __WRONGANIMAL_HPP__
- #define __WRONGANIMAL_HPP__
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: raitmous <raitmous@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/27 05:28:05 by raitmous          #+#    #+#             */
+/*   Updated: 2023/08/27 05:28:06 by raitmous         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef __WRONGANIMAL_HPP__
+#define __WRONGANIMAL_HPP__
 
 #include <string>
 #include <iostream>

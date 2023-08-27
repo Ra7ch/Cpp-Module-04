@@ -1,19 +1,35 @@
-CXX = c++
-CXXFLAGS = -std=c++98 -Wall -Wextra -Werror
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: raitmous <raitmous@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/08/27 05:30:26 by raitmous          #+#    #+#              #
+#    Updated: 2023/08/27 05:40:50 by raitmous         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
-SRCS = main.cpp AMateria.cpp Ice.cpp Cure.cpp ICharacter.cpp Character.cpp MateriaSource.cpp
+SRCS = main.cpp AMateria.cpp Ice.cpp Cure.cpp Character.cpp MateriaSource.cpp
+CXXFLAGS = -std=c++98 -Wall -Wextra -Werror
 OBJS = $(SRCS:.cpp=.o)
-EXEC = main
+NAME = main
+CXX = c++
+
+
+all	: ${NAME}
+
+${NAME} : ${OBJS}
+	${CXX} ${CXXFLAGS} ${SRCS} -o ${NAME}
+
+clean :
+	${RM} ${OBJS}
+
+fclean : clean
+	${RM} ${NAME}
+
+re : fclean all
+
+a : all clean
 
 .PHONY: all clean
-
-all: $(EXEC)
-
-$(EXEC): $(OBJS)
-	$(CXX) $(CXXFLAGS) $(OBJS) -o $(EXEC)
-
-%.o: %.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
-
-clean:
-	rm -f $(OBJS) $(EXEC)
