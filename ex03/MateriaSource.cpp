@@ -6,7 +6,7 @@
 /*   By: raitmous <raitmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 05:31:03 by raitmous          #+#    #+#             */
-/*   Updated: 2023/08/27 05:31:04 by raitmous         ###   ########.fr       */
+/*   Updated: 2023/08/30 04:01:09 by raitmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ void MateriaSource::learnMateria(AMateria *m) {
             return;
         }
     }
+    delete (m);
 }
 
 AMateria* MateriaSource::createMateria(std::string const &_type) {

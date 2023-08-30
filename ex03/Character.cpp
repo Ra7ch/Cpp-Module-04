@@ -6,7 +6,7 @@
 /*   By: raitmous <raitmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 05:29:19 by raitmous          #+#    #+#             */
-/*   Updated: 2023/08/27 05:29:20 by raitmous         ###   ########.fr       */
+/*   Updated: 2023/08/30 05:06:15 by raitmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,25 +53,34 @@ std::string const& Character::getName() const {
 
 void Character::equip(AMateria *m) {
     for (int i = 0; i < 4; ++i) {
+        if ((inventory[i]) == m) { 
+            std::cout << "You cant have the same item in two slots." << std::endl;
+            return ;
+        }
         if (!inventory[i]) {
             inventory[i] = m;
             return ;
         }
     }
+    delete m;
 }
 
 void Character::unequip(int idx) {
-    if (idx >=0 && idx < 4)
+    if (idx >=0 && idx < 4) {
         inventory[idx] = NULL;
+    }
 }
 
 void Character::use(int idx, ICharacter &target) {
+   
     if (idx >= 0 && idx < 4 && inventory[idx])
         inventory[idx]->use(target);
 }
 
 // Default Destructor.
 Character::~Character() {
-    for (int i = 0; i < 4; ++i)
-        delete inventory[i];
+    for (int i = 0; i < 4; ++i) {
+        if (inventory[i] != NULL)
+            delete inventory[i];
+    }
 }

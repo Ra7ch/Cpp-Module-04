@@ -6,7 +6,7 @@
 /*   By: raitmous <raitmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 05:31:07 by raitmous          #+#    #+#             */
-/*   Updated: 2023/08/27 05:31:08 by raitmous         ###   ########.fr       */
+/*   Updated: 2023/08/30 02:50:51 by raitmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class MateriaSource : public IMateriaSource {
     private:
         AMateria *sources[4];
-        int learned;
+        //int learned;
 
     public:
         // DEfault Constructor.

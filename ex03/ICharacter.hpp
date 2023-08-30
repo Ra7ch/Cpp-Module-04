@@ -6,7 +6,7 @@
 /*   By: raitmous <raitmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 05:29:49 by raitmous          #+#    #+#             */
-/*   Updated: 2023/08/27 05:29:50 by raitmous         ###   ########.fr       */
+/*   Updated: 2023/08/30 04:53:50 by raitmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ class AMateria;
 class ICharacter
 {
 public:
+        AMateria *inventory[4];
+
     virtual ~ICharacter() {}
     virtual std::string const &getName() const = 0;
     virtual void equip(AMateria *m) = 0;

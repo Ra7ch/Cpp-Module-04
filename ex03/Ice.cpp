@@ -6,7 +6,7 @@
 /*   By: raitmous <raitmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 05:29:35 by raitmous          #+#    #+#             */
-/*   Updated: 2023/08/27 05:29:36 by raitmous         ###   ########.fr       */
+/*   Updated: 2023/08/30 04:19:21 by raitmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,3 +35,7 @@ AMateria* Ice::clone() const {
 void Ice::use(ICharacter& target) {
     std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
 }
+
+// Destructor
+
+Ice::~Ice() {};

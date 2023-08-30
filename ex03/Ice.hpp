@@ -6,7 +6,7 @@
 /*   By: raitmous <raitmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 05:29:39 by raitmous          #+#    #+#             */
-/*   Updated: 2023/08/27 05:29:40 by raitmous         ###   ########.fr       */
+/*   Updated: 2023/08/30 04:18:41 by raitmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,6 @@ class Ice : public AMateria {
         void use(ICharacter& target);
 
         // Default Destractor.
-        ~Ice() {}
+        ~Ice();
 };
 #endif

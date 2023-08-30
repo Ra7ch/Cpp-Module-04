@@ -6,7 +6,7 @@
 /*   By: raitmous <raitmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 05:29:23 by raitmous          #+#    #+#             */
-/*   Updated: 2023/08/27 05:29:24 by raitmous         ###   ########.fr       */
+/*   Updated: 2023/08/30 04:53:37 by raitmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class Character : public ICharacter {
     private :
         std::string name;
-        AMateria *inventory[4];
+        //AMateria *inventory[4];
 
     public :
         // Default Constructor.
